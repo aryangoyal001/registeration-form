@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Responsive Registration Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="toggle-mode">
+      <label for="darkToggle">Dark Mode</label>
+      <input type="checkbox" id="darkToggle" />
+    </div>
+    <h2>Register New Account</h2>
+    <p class="required-note">* Indicates required question</p>
+    <form id="registrationForm">
+      <div class="form-group">
+        <label class="required">First Name</label>
+        <input type="text" name="firstName" placeholder="Enter first name" required />
+      </div>
+      <div class="form-group">
+        <label class="required">Last Name</label>
+        <input type="text" name="lastName" placeholder="Enter last name" required />
+      </div>
+      <div class="form-group">
+        <label class="required">Email Address</label>
+        <input type="email" name="email" placeholder="Enter email" required />
+      </div>
+      <div class="form-group">
+        <label class="required">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter password" required />
+        <div id="strength" class="password-strength"></div>
+      </div>
+      <div class="form-group">
+        <label class="required">Confirm Password</label>
+        <input type="password" name="confirmPassword" placeholder="Confirm password" required />
+      </div>
+      <div class="form-group">
+        <label class="required">Date of Birth</label>
+        <input type="date" name="dob" required />
+      </div>
+      <div class="form-group">
+        <label class="required">Gender</label>
+        <div class="gender-group">
+          <label><input type="radio" name="gender" value="Male" required /> Male</label>
+          <label><input type="radio" name="gender" value="Female" /> Female</label>
+          <label><input type="radio" name="gender" value="Other" /> Other</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Profile Picture</label>
+        <input type="file" name="profilePicture" accept="image/*" />
+      </div>
+      <div class="form-check">
+        <input type="checkbox" name="terms" required />
+        <label class="required">I agree to the terms and conditions</label>
+      </div>
+      <div class="button-group">
+        <button type="submit" class="submit-btn">Register</button>
+        <button type="button" class="reset-btn" onclick="resetForm()">Clear Form</button>
+      </div>
+    </form>
+  </div>
+   <script src="logic.JS"></script>
+</body>
+</html>

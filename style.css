@@ -1,0 +1,237 @@
+* {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f9ff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    .dark-mode {
+      background-color: #121212;
+      color: #e0e0e0;
+    }
+
+    .dark-mode .container {
+      background-color: #1f1f1f;
+      border-top: 10px solid #00c6ff;
+      box-shadow: 0 15px 40px rgba(255, 255, 255, 0.1);
+    }
+
+    .dark-mode input,
+    .dark-mode select {
+      background-color: #333;
+      color: #fff;
+      border: 1px solid #777;
+    }
+
+    .dark-mode input[type="file"] {
+      background-color: transparent;
+    }
+
+    .dark-mode label {
+      color: #ccc;
+    }
+
+    .container {
+      background-color: #ffffff;
+      padding: 35px 30px;
+      border-radius: 20px;
+      max-width: 500px;
+      width: 90%;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+      border-top: 10px solid #00c6ff;
+      position: relative;
+    }
+
+    .toggle-mode {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 14px;
+      color: #003366;
+    }
+
+    .dark-mode .toggle-mode {
+      color: #ccc;
+    }
+
+    h2 {
+      text-align: center;
+      color: #003366;
+      margin-bottom: 5px;
+      font-size: 26px;
+    }
+
+    .dark-mode h2 {
+      color: #e0e0e0;
+    }
+
+    .required-note {
+      text-align: center;
+      font-size: 13px;
+      color: #666;
+      margin-top: -10px;
+      margin-bottom: 20px;
+    }
+
+    .dark-mode .required-note {
+      color: #aaa;
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 600;
+      color: #003366;
+      font-size: 15px;
+    }
+
+    label.required::after {
+      content: " *";
+      color: red;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      font-size: 15px;
+    }
+
+    input[type="file"] {
+      padding: 6px;
+    }
+
+    .gender-group {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .gender-group label {
+      font-weight: normal;
+      font-size: 14px;
+    }
+
+    .password-strength {
+      margin-top: 6px;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 14px;
+    }
+
+    .weak {
+      color: red;
+    }
+
+    .medium {
+      color: orange;
+    }
+
+    .strong {
+      color: green;
+    }
+
+    .form-check {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .form-check label {
+      font-weight: normal;
+      margin: 0;
+      font-size: 14px;
+    }
+
+    .button-group {
+      display: flex;
+      gap: 10px;
+      margin-top: 15px;
+    }
+
+    button {
+      flex: 1;
+      padding: 12px;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .submit-btn {
+      background-color: #0052cc;
+      color: white;
+    }
+
+    .submit-btn:hover {
+      background-color: #003d99;
+    }
+
+    .reset-btn {
+      background-color: #cccccc;
+      color: #333;
+    }
+
+    .reset-btn:hover {
+      background-color: #bbbbbb;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 25px 20px;
+      }
+
+      h2 {
+        font-size: 24px;
+      }
+
+      input, select {
+        font-size: 14px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h2 {
+        font-size: 22px;
+      }
+
+      label {
+        font-size: 14px;
+      }
+
+      .gender-group {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .form-check {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      button {
+        font-size: 15px;
+      }
+
+      .button-group {
+        flex-direction: column;
+      }
+    }
